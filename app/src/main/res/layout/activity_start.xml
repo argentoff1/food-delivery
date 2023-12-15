@@ -14,7 +14,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/burgerr" />
+        app:srcCompat="@drawable/burgerr"
+        android:contentDescription="@string/burger" />
 
     <TextView
         android:id="@+id/textView4"
@@ -26,7 +27,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:fontFamily="@font/yeonsung"
-        android:text="Enjoy Restaurant Quality Meals \nat Home"
+        android:text="@string/enjoy_restaurant_quality_meals_at_home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
@@ -41,7 +42,7 @@
         android:textStyle="bold"
         android:textSize="16sp"
         android:fontFamily="@font/yeonsung"
-        android:text="Design By \nNeatRoots"
+        android:text="@string/design_by_neatroots"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -52,7 +53,7 @@
         android:layout_height="65dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/green_btn"
-        android:text="Next"
+        android:text="@string/next"
         android:outlineSpotShadowColor="@color/startGreenColor"
         android:outlineAmbientShadowColor="@color/startGreenColor"
         android:elevation="3dp"
