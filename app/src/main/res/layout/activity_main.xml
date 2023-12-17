@@ -20,8 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
             android:fontFamily="@font/yeonsung"
             android:text="@string/explore_your_favorite_food"
             android:textColor="@color/black"
@@ -39,7 +39,8 @@
             android:src="@drawable/ic_bell"
             app:layout_constraintBottom_toBottomOf="@+id/textView14"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView14" />
+            app:layout_constraintTop_toTopOf="@+id/textView14"
+            android:contentDescription="@string/bells" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

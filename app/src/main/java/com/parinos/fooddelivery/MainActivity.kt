@@ -4,6 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.parinos.fooddelivery.databinding.ActivityMainBinding
+import com.parinos.fooddelivery.fragments.CartFragment
+import com.parinos.fooddelivery.fragments.HomeFragment
+import com.parinos.fooddelivery.fragments.ListFragment
+import com.parinos.fooddelivery.fragments.ProfileFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -38,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun changeFragment(fragment: Fragment) {
+    private fun changeFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.fragment_container, fragment)

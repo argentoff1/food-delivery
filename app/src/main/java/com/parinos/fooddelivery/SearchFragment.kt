@@ -24,8 +24,8 @@ class SearchFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            param1 = it.getString(com.parinos.fooddelivery.fragments.ARG_PARAM1)
+            param2 = it.getString(com.parinos.fooddelivery.fragments.ARG_PARAM2)
         }
     }
 
@@ -51,8 +51,8 @@ class SearchFragment : Fragment() {
         fun newInstance(param1: String, param2: String) =
             SearchFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+                    putString(com.parinos.fooddelivery.fragments.ARG_PARAM1, param1)
+                    putString(com.parinos.fooddelivery.fragments.ARG_PARAM2, param2)
                 }
             }
     }
