@@ -3,12 +3,19 @@ package com.parinos.fooddelivery
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationItemView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.parinos.fooddelivery.databinding.ActivityMainBinding
 import com.parinos.fooddelivery.fragments.CartFragment
 import com.parinos.fooddelivery.fragments.HomeFragment
 import com.parinos.fooddelivery.fragments.ListFragment
 import com.parinos.fooddelivery.fragments.ProfileFragment
 
+/**
+ * В этом коммите поломалось мэйн активити - урок 7
+ */
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
@@ -17,35 +24,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        changeFragment(HomeFragment())
+        val bottomNavView = findViewById<BottomNavigationView>(R.id.bottom_navigation_view)
+        val navigationView = findNavController(R.id.navigation_fragment)
 
-        binding.bottomNavigationView.setOnItemSelectedListener {
-            when(it.itemId) {
-                R.id.home -> {
-                    changeFragment(HomeFragment())
-                }
-                R.id.cart -> {
-                    changeFragment(CartFragment())
-                }
-                R.id.search -> {
-                    changeFragment(SearchFragment())
-                }
-                R.id.list -> {
-                    changeFragment(ListFragment())
-                }
-                R.id.profile -> {
-                    changeFragment(ProfileFragment())
-                }
-            }
-            return@setOnItemSelectedListener true
-        }
-
-    }
-
-    private fun changeFragment(fragment: Fragment) {
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fragment_container, fragment)
-        fragmentTransaction.commit()
+        bottomNavView.setupWithNavController(navigationView)
     }
 }
